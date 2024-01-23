@@ -12,7 +12,11 @@ const AlbumPage = () => {
   let headers = new Headers({
     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     "X-RapidAPI-Key": "222902beabmshb95a65b737cead6p1f3ac9jsn23ced94c0d20",
+    
   });
+
+  
+ 
 
   const fetchAlbum = async () => {
     try {
@@ -22,6 +26,10 @@ const AlbumPage = () => {
         {
           method: "GET",
           headers: headers,
+           
+           options: {
+             'Access-Control-Allow-Origin': '*',
+         }
         }
       );
       if (response.ok) {
