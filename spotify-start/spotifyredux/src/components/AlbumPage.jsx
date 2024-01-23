@@ -84,7 +84,8 @@ const AlbumPage = () => {
           <Container fluid id="mainPage" className=" mt-5 d-flex align-center justify-content-center">
             <Row className=" d-flex align-center justify-content-center">
                   <Col md={6} className="mb-5 text-center " id="trackList">
-                    
+                  {/* ogni elemento di data , track sarebbe : object con nodi album e artist per accedere a questi nodi track.albumecc...
+                  */}
                   {albumDaMostrare.data.map((track) => (console.log(track),
                       <>
                       <h1 key={track.id}>

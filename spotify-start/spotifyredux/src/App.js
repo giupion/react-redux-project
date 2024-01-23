@@ -5,6 +5,7 @@ import { Row, Col, Container } from 'react-bootstrap'
 import SidebarVertical from './components/SidebarVertical'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import AlbumPage from './components/AlbumPage';
+import Player from './components/Player';
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
     <Col sm={2}>
             <SidebarVertical />
           </Col>
-     <Col sm={10} className='col-12 col-md-9 offset-md-3 mainPage'>
+     <Col sm={5} className='col-12 col-md-9 offset-md-3 mainPage'>
     <Barrasuperiore/>
 <AlbumPage/>
+<Player/>
     </Col>
     </Row>
     </Container>
