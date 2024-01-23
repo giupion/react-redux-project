@@ -43,7 +43,7 @@ const AlbumPage = () => {
 
     return (
       <div>
-        {albumDaMostrare.map ? (
+        {albumDaMostrare? (
           <Container fluid id="mainPage">
             <Row>
               <Col md={3} className="pt-5 text-center" id="img-container">
