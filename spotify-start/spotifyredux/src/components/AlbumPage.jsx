@@ -39,12 +39,16 @@ const AlbumPage = () => {
   }, [params.id]);//ogni volta che passi l'id fai il fetch, usi funzione
 
   return (
+    
     <div>
-      {albumToShow ? (
+      {console.log(albumToShow)/*siamo nello stato in cui nella chiamata abbiamo null se metto data!*/};
+      {
+      albumToShow ? (
         <Container fluid id="mainPage">
           <Row>
             <Col md={3} className="pt-5 text-center" id="img-container">
               <img
+              
                 src={albumToShow.cover}
                 className="card-img img-fluid"
                 alt="Album"
@@ -70,8 +74,11 @@ const AlbumPage = () => {
               <Row>
                 <Col md={10} className="mb-5" id="trackList">
                   {albumToShow.tracks.data.map((track) => {
+                    {/* siamo nello stato in cui track contiene un array e devi entrain data tracks e poi nodo data devi guardare bene quando fai console.log*/ }
+                    console.log(albumToShow.tracks)
                     return (
-                      <SingleTrack key={track.id} track={track} />
+                      <SingleTrack key={track.id} track={track} /> //track passato come props a singletrack
+                      
                     );
                   })}
                 </Col>

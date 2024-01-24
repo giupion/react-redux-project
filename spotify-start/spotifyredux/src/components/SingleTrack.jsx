@@ -28,7 +28,7 @@ const SingleTrack = (props) => {
   const handleClick=()=>{
     if(clicked){dispatch({
       type:"REMOVE_FAVOURITE",
-      payload:track,
+      payload:track,//è il carico cioe rappresenta:
     })}
   else{dispatch({
     type:"ADD_FAVOURITE",
