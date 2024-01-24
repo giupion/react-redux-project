@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Barrasuperiore = () => {
+const TopBar = () => {
   return (
     <div className="col-9 col-lg-11  d-none d-md-flex" id="mainLinks">
       <a >TRENDING</a>
@@ -13,4 +13,4 @@ const Barrasuperiore = () => {
   )
 }
 
-export default Barrasuperiore
+export default TopBar

@@ -1,6 +1,7 @@
+
 import React from 'react'
 
-const ArtistPage = () => {
+const SearchResults = () => {
   return (
     <div>
       
@@ -8,4 +9,4 @@ const ArtistPage = () => {
   )
 }
 
-export default ArtistPage
+export default SearchResults

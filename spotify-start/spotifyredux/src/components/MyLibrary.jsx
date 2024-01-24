@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ArtistPage = () => {
+const MyLibrary = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const ArtistPage = () => {
   )
 }
 
-export default ArtistPage
+export default MyLibrary
