@@ -19,7 +19,7 @@ const FetchAlbumsData = (artists) => {
 
       try {
         const response = await fetch(
-          `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}&type=album`
+          `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}&type=album` //cosi con type album ottieni album gia da subito dall'artista tutti gli album
         );
         if (response.ok) {
           const data = await response.json();

@@ -16,20 +16,20 @@ const Home = () => {
   ]
 
   let rockArtists = [
-    'maroon5',
-    'coldplay',
-    'harrystyles',
-    'taylorswift',
-    'katyperry',
-    'arianagrande',
+    'linkinpark',
+    'greenday',
+    'acdc',
+    'imaginedragons',
+    'mychemicalromance',
+    'paramore',
   ]
 
   let AnimeArtists = [
-    '',
-    'snoopdogg',
-    'lilwayne',
-    'drake',
-    'kanyewest',
+    'natewantstobattle',
+    'fabvl',
+    'thymeka',
+    'dividemusic',
+    'oneokrock',
   ]
   const metalAlbum = FetchAlbumsData(metalArtists);
   const rockAlbums = FetchAlbumsData(rockArtists);
