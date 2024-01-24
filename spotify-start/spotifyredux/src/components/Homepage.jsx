@@ -13,7 +13,9 @@ const Home = () => {
     'fivefingerdeathpunch',
     'iconforhire',
     'inflames',
-    'metallica'
+    'metallica',
+    'sonataartica',
+    'apocalyptica'
   ]
 
   let rockArtists = [
@@ -32,11 +34,21 @@ const Home = () => {
     'thymeka',
     'dividemusic',
     'oneokrock',
+    'elodie',
+  ]
+
+  let MarraArtists = [
+    'marracash',
+    'elodie',
+    'sferaebbasta',
+    'eminem',
+    'massimopericolo',
+    'Salmo'
   ]
   const metalAlbum = FetchAlbumsData(metalArtists);
   const rockAlbums = FetchAlbumsData(rockArtists);
   const AnimeAlbums = FetchAlbumsData(AnimeArtists);
-
+const RapAlbums=FetchAlbumsData(MarraArtists);
   const results = useSelector((state) => state.search.searchResults);
   
   useEffect(() => {
@@ -50,6 +62,7 @@ const Home = () => {
       ai risultati di ricerca i risultati, alla lista album  passo le costanti a cui è stato fecth ato array contente il nome mi sposto su albumlist e poi su search result */}
       <AlbumList title="Hard-as-Rock" albums={rockAlbums} />
       <AlbumList title="Anime-songs" albums={AnimeAlbums} />
+      <AlbumList title="Tipi-duri e rappanti" albums={RapAlbums} />
     </Row>
   );
 };

@@ -7,7 +7,7 @@ const FetchAlbumsData = (artists) => {
     let foundAlbums = [];
     let selectedArtists = [];
 
-    while (selectedArtists.length < 4) {
+    while (selectedArtists.length < 5) {
       let artist = artists[Math.floor(Math.random() * artists.length)]; // select an element from the array with an index between 0 and 7
       if (!selectedArtists.includes(artist)) { // checks if the artist is not already present in the array
         selectedArtists.push(artist);//pusha in questo caso
