@@ -12,6 +12,11 @@ const AlbumList = ({title,albums}) => {//estraggo elemento array da 0 a 3
 
     <img src={singleAlbum.album.cover_medium}/>
   </div>
+  <Link
+                  className="h5 text-light"
+                  to={"/album/" + singleAlbum.album.id}
+                >{singleAlbum.album.title}</Link>
+                
 </Col>))}
 
       </Row>

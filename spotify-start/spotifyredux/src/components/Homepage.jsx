@@ -12,7 +12,8 @@ const Home = () => {
     'trivium',
     'fivefingerdeathpunch',
     'iconforhire',
-    'inflames'
+    'inflames',
+    'metallica'
   ]
 
   let rockArtists = [
@@ -22,6 +23,7 @@ const Home = () => {
     'imaginedragons',
     'mychemicalromance',
     'paramore',
+    
   ]
 
   let AnimeArtists = [
