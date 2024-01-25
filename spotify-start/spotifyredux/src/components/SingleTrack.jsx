@@ -50,22 +50,22 @@ const SingleTrack = (props) => {
           style={{ color: "white" }}
           
         >
-          <img src={track.album.cover_medium} width={"1px"}/>
+          <img src={track.album.cover_medium} width={"60px"}/>
           <h1>{track.title} </h1>
         </Col>
-        <Col xs={2} lg={1} className="duration" style={{ color: "white" }}>
+        <Col xs={2}  className="duration" style={{ color: "white" }}>
          
         </Col>
-        <Col xs={2} lg={1}>
+        <Col xs={2} >
           {clicked ? ( //se cliccato  il cuore diventa nero altrimenti applica cuore vuoto
             <FaHeart
-              color="black"
-              className="ms-3"
+              color="grey"
+              className="ms-3 fs-5"
               onClick={() => handleClick()}
             />
           ) : (
             <FaRegHeart
-              className="text-light ms-3"
+              className="text-light ms-3 fs-5"
               onClick={() => handleClick()}
             />
           )}
