@@ -5,7 +5,7 @@ import { Col,Row } from 'react-bootstrap';
 
 //qua da album page passiamo tutte le canzoni 
 const SingleTrack = (props) => {
-  const track=props.track;
+  const track=props.track; //track={track} track viene passata com prop, diventa na proprietà di props
   const dispatch=useDispatch()
   let clicked=false;
   //prendila porzione di stato che ti interessa, dei preferiti dopo i lcombine
@@ -25,10 +25,11 @@ const SingleTrack = (props) => {
       {if(favourites[i].id===track.id){clicked=true; 
       break;}} //se presente nei favoriti cio che iterato setta click su true, cosi il pc sa che è cliccato ed è nei favoriti so cosa fare con le action lol
   //clicked condizione da testatre se vero allora
-  const handleClick=()=>{
+  const handleClick=()=>{//funzoione handleclick che chiama le azioni se cliccaro manda in azione remove favourute,
+    //se non lo è lo toglie
     if(clicked){dispatch({
       type:"REMOVE_FAVOURITE",
-      payload:track,//è il carico cioe rappresenta:
+      payload:track,//è il carico cioe rappresenta:l'oggetto cliccato passato come props
     })}
   else{dispatch({
     type:"ADD_FAVOURITE",
@@ -36,7 +37,7 @@ const SingleTrack = (props) => {
   })
   
   }
-  console.log("track",track)
+  console.log("track",track)//stampo un azione di tipo track con contenuto di quello cliccato
   }
   
       return (
@@ -47,25 +48,18 @@ const SingleTrack = (props) => {
           lg={10}
           className="card-title px-3 m-0 d-block"
           style={{ color: "white" }}
-          onClick={() => {
-            dispatch({ type: "SELECT_SONG", payload: track });
-          }}
+          
         >
-          {track.title}
+          <img src={track.album.cover_medium} width={"1px"}/>
+          <h1>{track.title} </h1>
         </Col>
         <Col xs={2} lg={1} className="duration" style={{ color: "white" }}>
-          {Math.floor(
-            parseInt(track.duration) / 60 // setting the duration minutes
-          )}
-          :
-          {parseInt(track.duration) % 60 < 10
-            ? "0" + (parseInt(track.duration) % 60) // checking the duration seconds, if they are less than 10 a 0 is prefixed
-            : parseInt(track.duration) % 60}
+         
         </Col>
         <Col xs={2} lg={1}>
-          {clicked ? (
+          {clicked ? ( //se cliccato  il cuore diventa nero altrimenti applica cuore vuoto
             <FaHeart
-              color="gold"
+              color="black"
               className="ms-3"
               onClick={() => handleClick()}
             />
