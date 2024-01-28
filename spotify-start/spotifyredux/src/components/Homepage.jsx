@@ -54,7 +54,7 @@ const Home = () => {
   const AnimeAlbums = FetchAlbumsData(AnimeArtists);
 const RapAlbums=FetchAlbumsData(MarraArtists);
   const results = useSelector((state) => state.search.searchResults);
-  
+  //state.search.searchResults reducer ...condensato nella costante results passata come props a search result importata in homepage, si devono vedere qui le immagini
   useEffect(() => {
     console.log('ciao home')
   })
