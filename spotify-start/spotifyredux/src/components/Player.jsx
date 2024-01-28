@@ -27,7 +27,33 @@ const Player = () => {
 const coverSmall=song.album&&song.album.cover_small;//deve esistere essere true sia album che cover.small cosi si evita che tiri un errore e appare solo nel caso esistano entrambi
 const title=song.title||""; //se song è falso lo setta in una stringa vuolta se è null undefinde cosi si ha  sempre una string
 const artistName=(song.artist&&song.artist.name) || "";
+console.log(song)
+const[isPlaying,setIsPlaying]=useState(true)
+const audioRef=useRef(null)
 
+const handlePlayPause = () => {
+  console.log(audioRef)
+  if (audioRef.current.paused) {
+    audioRef.current.play();
+    setIsPlaying(true);
+  } else {
+    audioRef.current.pause();
+    setIsPlaying(false);
+  }
+};
+
+useEffect(() => {
+  console.log(song);
+  if (audioRef.current) {
+    audioRef.current.load();
+    audioRef.current.play();
+    setIsPlaying(true);
+  }
+}, [song]);
+
+if (!song || song.length === 0) {
+  return null;
+}
   return (
     <Container fluid className="fixed-bottom bg-container pt-md-1">
       <Row>
@@ -53,7 +79,12 @@ const artistName=(song.artist&&song.artist.name) || "";
                   </a>
                 </Col>
                 <Col xs={1} className="col-sm-1">
-                 <a>
+                  <a href="#" onClick={handlePlayPause}>
+                    <img src={isPlaying ? require('../playerbuttons/Shuffle.png'):require('../playerbuttons/Play.png')} alt="play/pause" />
+                  </a>
+                </Col>
+                <Col xs={1} className="col-sm-1">
+                 <a >
                     <img src={require('../playerbuttons/Play.png')} alt="play/pause" />
                   </a>
                 </Col>
@@ -77,7 +108,9 @@ const artistName=(song.artist&&song.artist.name) || "";
               </div>
             </div>
           </div>
-         
+          <audio ref={audioRef}>
+            <source src={song.preview} type="audio/mpeg" />
+          </audio>
         </Col>
       </Row>
     </Container>
