@@ -6,7 +6,11 @@ import favouritesReducer from '../reducers/favouriteReducer'
 const store = configureStore({
   reducer: combineReducers({
     search: searchReducer,
-    player: playerReducer,
+    player: playerReducer,  /*(property) player: (state: {
+      selectedSong: never[];
+  } | undefined, action: any) => {
+      selectedSong: any;
+  }*/ 
     favourites: favouritesReducer
   })
 })

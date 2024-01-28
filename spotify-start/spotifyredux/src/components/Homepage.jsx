@@ -15,16 +15,20 @@ const Home = () => {
     'inflames',
     'metallica',
     'sonataartica',
-    'apocalyptica'
+    'apocalyptica',
+    'bulletformyvalentine',
+    'ironmaiden',
   ]
 
   let rockArtists = [
     'linkinpark',
     'greenday',
-    'acdc',
+    'riseagainst',
     'imaginedragons',
     'mychemicalromance',
     'paramore',
+
+    
     
   ]
 
