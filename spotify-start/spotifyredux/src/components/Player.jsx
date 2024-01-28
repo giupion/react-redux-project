@@ -48,27 +48,27 @@ const Player = () => {
               <Row className="iconsImg justify-content-center">
                 <Col xs={1} className="col-sm-1">
                   <a href="#">
-                    <img src={require('../playerbuttons/Shuffle.png')} alt="shuffle" />
+                    <img src="/assets/images/playerbuttons/Shuffle.png" alt="shuffle" />
                   </a>
                 </Col>
                 <Col xs={1} className="col-sm-1">
                   <a href="#">
-                    <img src={require('../playerbuttons/Previous.png')} alt="previous" />
+                    <img src="/assets/images/playerbuttons/Previous.png" alt="previous" />
                   </a>
                 </Col>
                 <Col xs={1} className="col-sm-1">
                   <a href="#" onClick={handlePlayPause}>
-                    <img src={require('../playerbuttons/Play.png')} alt="play/pause" />
+                    <img src={isPlaying ? "/assets/images/playerbuttons/Pause.png" : "/assets/images/playerbuttons/Play.png"} alt="play/pause" />
                   </a>
                 </Col>
                 <Col xs={1} className="col-sm-1">
                   <a href="#">
-                    <img src={require('../playerbuttons/Next.png')} alt="next" />
+                    <img src="/assets/images/playerbuttons/Next.png" alt="next" />
                   </a>
                 </Col>
                 <Col xs={1} className="col-sm-1">
                   <a href="#">
-                    <img src={require('../playerbuttons/Repeat.png')} alt="repeat" />
+                    <img src="/assets/images/playerbuttons/Repeat.png" alt="repeat" />
                   </a>
                 </Col>
               </Row>
@@ -91,5 +91,4 @@ const Player = () => {
 };
 
 export default Player;
-
 

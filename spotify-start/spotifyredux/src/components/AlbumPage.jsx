@@ -10,6 +10,11 @@ const AlbumPage = () => {
   let headers = new Headers({
     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     "X-RapidAPI-Key": "222902beabmshb95a65b737cead6p1f3ac9jsn23ced94c0d20",
+    "Access-Control-Allow-Origin": "*",
+
+"Access-Control-Allow-Methods": "POST, PUT, PATCH, GET, DELETE, OPTIONS",
+
+"Access-Control-Allow-Headers": "*",
   });
 
   const fetchAlbum = async () => {
@@ -75,7 +80,7 @@ const AlbumPage = () => {
                 <Col md={10} className="mb-5" id="trackList">
                   {albumToShow.tracks.data.map((track) => {
                     {/* siamo nello stato in cui track contiene un array e devi entrain data tracks e poi nodo data devi guardare bene quando fai console.log*/ }
-                    console.log(albumToShow.tracks)
+                    console.log(albumToShow)
                     return (
                       <SingleTrack key={track.id} track={track} /> //track passato come props a singletrack
                       

@@ -48,10 +48,13 @@ const SingleTrack = (props) => {
           lg={10}
           className="card-title px-3 m-0 d-block"
           style={{ color: "white" }}
-          
+          onClick={() => {
+            dispatch({ type: "SELECT_SONG", payload: track });
+          }}
         >
           <img src={track.album.cover_medium} width={"60px"}/>
           <h1>{track.title} </h1>
+          
         </Col>
         <Col xs={2}  className="duration" style={{ color: "white" }}>
          
