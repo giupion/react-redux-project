@@ -5,7 +5,7 @@ const SearchResults = ({ results }) => {
     console.log(results);
   return (
     <div className="col-12 pb-3 mt-5">
-        <h2 className='text-light my-4'>Risultati Ricerca</h2>
+        <h2 className='text-light my-4'>Search Results</h2>
       <Row className='d-flex'>
       {results && results.length > 0 &&
         results.slice(0,8).map((result) => (
