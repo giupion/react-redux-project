@@ -38,7 +38,7 @@ const Sidebar = () => {
   return (
     <Navbar expand="md" fixed="left"  className="d-none d-md-flex">
       <Link className="navbar-brand" to="/">
-        <img src={require('../logo/Spotify_Logo.png')} width={131} height={40} className="mt-3" />
+        <img src="/assets/images/logo/Spotify_Logo.png" alt="Spotify_Logo" width={131} height={40} className="mt-3" />
       </Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="align-items-baseline">

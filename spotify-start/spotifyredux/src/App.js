@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Sidebar from './components/Sidebar'
 import Topbar from './components/Topbar'
 import Home from './components/Homepage'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import {HashRouter, Routes, Route,  } from 'react-router-dom'
 import { Row, Col, Container } from 'react-bootstrap'
 import Player from './components/Player'
 import ArtistPage from './components/ArtistPage'
@@ -12,7 +12,7 @@ import MyLibrary from './components/MyLibrary'
 
 function App () {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Container fluid>
         <Row>
           <Col sm={2}>
@@ -30,7 +30,7 @@ function App () {
           </Col>
         </Row>
       </Container>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
